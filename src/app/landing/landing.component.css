@@ -1,0 +1,75 @@
+body, html {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+
+}
+.about {
+  text-align: center;
+  z-index:2;
+  height:30vh;
+  padding-top:3em;
+  padding-left:2em;
+  vertical-align: center;
+  font-family: 'Satisfy', cursive;
+  
+}
+.panel {
+  background:linear-gradient(rgba(0, 0, 0, 0.0) 0%, rgba(33,37,41, 1) 5%);
+  margin-top:-1.5em;
+  max-width:100%;
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1.0) 5%);
+}
+.panel-image {
+  
+  height:40vh;
+  background-image: linear-gradient( rgba(33,37,41, 1) 0%, rgba(33,37,41, 1) 2%, rgba(33,37,41, .9) 3%, rgba(33,37,41, .8) 8%,  rgba(0, 0, 0, 0) 15%), url("../Images/Pizza-Dough-Making.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  font-size: 5em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  line-height: 75%;
+  text-shadow: 2px 2px #000000;
+  font-family: 'Satisfy', cursive;
+}
+@media (min-width: 992px) {
+  .about {
+    text-align: left;
+    padding-top:7em;
+    padding-left:2em;
+    vertical-align: center;
+    
+    height:120vh;
+  }
+  .row {
+    height:60vh;
+  }
+  .panel-image {
+    mask-image:linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1.0) 5%);
+    background-image: url("../Images/Pizza-Dough-Making.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:120vh;
+  }
+}
+.sec {
+  height: 90vh;
+  mask-image:linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1.0) 5%);
+}
+@media (max-width: 372px) {
+  .sec {
+    height: 80vh;
+  }
+}

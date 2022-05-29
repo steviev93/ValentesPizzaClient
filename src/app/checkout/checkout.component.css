@@ -1,0 +1,9 @@
+.form-group {
+    padding:2%;
+
+}
+
+.form-group:before{
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.2);
+    filter: blur(10px);
+}

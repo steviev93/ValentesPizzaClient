@@ -1,0 +1,50 @@
+.card-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+}
+
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/pizzuhhh.jpg");
+    /* Set a specific height */
+    height:100%;
+    width: 100%;
+    top:0%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -2;
+  }
+.item img {
+    width: 64px;
+    background-color: rgba(33,37,41, 1);
+}
+
+.item {
+    background-color: rgba(33,37,41, 1);
+    color:white;
+    text-align: center;
+}
+
+.item a:hover {
+    color: rgba(210,210,210, 1);
+    cursor: pointer;
+    background-color: rgba(33,37,41, .5);
+}
+.item:active {
+    border-color: rgba(33,37,41, 1);
+}
+
+.card {
+    padding: .8em;
+    margin: .8em;
+}
+

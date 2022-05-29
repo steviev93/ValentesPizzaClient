@@ -1,0 +1,28 @@
+<div style="min-height:90vh">
+    <div class="card-top container-fluid" style=" color:white; ">
+        <div class="container btn-group" style="justify-content: space-between; max-width: 100vw;overflow-x: scroll;">
+
+            <button class="item btn btn-secondary" *ngFor="let productGroup of productGroupList">
+                <a (click)="filterCat(productGroup.name)" routerLinkActive="">
+                    <h6>{{productGroup.name}}</h6>
+                </a>
+            </button>
+            
+        </div>
+
+    </div>
+
+    <div class="container-fluid" style="display: flex;">
+        <div class="row" style="max-height:35em;overflow-y: scroll; max-width:100vw;width:100%; justify-content: space-between;">
+            <ng-container *ngFor="let item of filterCategory | filter:searchKey:'name'">
+                <app-item-card [item]="item" class="card col-md-3"></app-item-card>
+            </ng-container>
+
+        </div>
+    </div>
+    <button routerLink="../cart" class="btn btn-primary"
+        style="background-color: rgb(251, 251, 251); position:fixed;bottom:5%;right:5%">
+        <i style="font-size: 30px;color:black" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+    </button>
+</div>

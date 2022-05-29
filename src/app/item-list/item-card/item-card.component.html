@@ -1,0 +1,8 @@
+    <div style="text-align: center;">
+        <img src="{{item.image}}" alt="" >
+    </div>
+    
+    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;">{{item.name}}</h5>
+    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;">{{item.description}}</p>
+    <p><strong>Price:</strong> {{item.price|currency}}</p>
+    <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
