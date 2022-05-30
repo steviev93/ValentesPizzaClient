@@ -1,3 +1,5 @@
+import { Product } from "./product";
+
 export interface Order {
 
     subtotal: Number,
@@ -11,7 +13,7 @@ export interface Order {
     city: String,
     state: String,
     zip: String,
-    orderLines: any[]
+    products: Product[]
 
 
 }

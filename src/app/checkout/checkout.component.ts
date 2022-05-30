@@ -15,6 +15,7 @@ import {States} from '../models/states';
 export class CheckoutComponent implements OnInit {
   checkoutForm: FormGroup;
   submitted = false;
+  selected = '';
   pickUp = false;
   states = States;
   delivery = true;
@@ -59,10 +60,10 @@ export class CheckoutComponent implements OnInit {
         city: this.checkoutForm.value.pickup ? null : this.checkoutForm.value.city,
         state: this.checkoutForm.value.pickup ? null : this.checkoutForm.value.state,
         zip: this.checkoutForm.value.pickup ? null : this.checkoutForm.value.zip,
-        orderLines: this.cartService.cartItemList
+        products: this.cartService.cartItemList
 
       }
-
+      console.log(this.checkoutForm.value.state);
       this.apiService.submitOrder(order)
         .then( data => {
               console.log(data);
@@ -70,12 +71,17 @@ export class CheckoutComponent implements OnInit {
           }).catch(function () {
             console.log("Promise Rejected");
           });
+
+      this.cartService.removeAllCart();
     }
   }
   onCheck() {
     this.pickUp = !this.pickUp;
     this.delivery = !this.delivery;
     console.log(this.pickUp);
+  }
+  onSelect() {
+    console.log(this.selected)
   }
   get f() { return this.checkoutForm.controls; }
 

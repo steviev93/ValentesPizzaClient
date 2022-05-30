@@ -16,11 +16,11 @@ export class AuthenticationService {
     ) { }
 
     public getToken(): string {
-        return this.storage.getItem('travlr-token') as string;
+        return this.storage.getItem('client-token') as string;
     }
 
     public saveToken(token: string): void {
-        this.storage.setItem('travlr-token', token);
+        this.storage.setItem('client-token', token);
     }
 
     public login(user: User): Promise<any> {
@@ -34,7 +34,7 @@ export class AuthenticationService {
     }
 
     public logout(): void {
-        this.storage.removeItem('travlr-token');
+        this.storage.removeItem('client-token');
     }
 
     public isLoggedIn(): boolean {

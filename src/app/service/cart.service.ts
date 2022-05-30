@@ -40,7 +40,7 @@ export class CartService {
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
-    this.storage.setItem('item-list', JSON.stringify(this.cartItemList));
+    this.storage.Item('item-list', JSON.stringify(this.cartItemList));
     console.log(this.cartItemList)
   }
   getSubTotal() : number {
